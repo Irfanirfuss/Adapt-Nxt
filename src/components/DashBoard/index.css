@@ -1,0 +1,37 @@
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #e1bee7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #d1c4e9;
+}
+
+.sidebar ul li.active {
+    background-color: #ba68c8;
+    color: #fff;
+}
+
+nav {
+    width: 100%;
+    background-color: #ba68c8;
+    border-radius: 10px;
+}
+h2 {
+    color: #ba68c8;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.main {
+    margin: 10px;
+    background-color: rgba(202, 166, 166, 0.89);
+}
