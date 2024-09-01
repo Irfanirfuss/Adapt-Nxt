@@ -1,6 +1,15 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 15%;
+    background-color: #f3e5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar ul li {
@@ -21,8 +30,36 @@
     color: #fff;
 }
 
+/* Main Content Styles */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+    width: 85%;
+}
+
+.chart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chart-container.line-chart {
+    width: 60%;
+    margin-right: 10px;
+}
+
+.chart-container.pie-chart {
+    width: 35%;
+}
+
+.main {
+    display: "flex";
+    height: "100vh";
+}
+
 nav {
-    width: 100%;
     background-color: #ba68c8;
     border-radius: 10px;
 }
@@ -30,8 +67,4 @@ h2 {
     color: #ba68c8;
     background-color: #fff;
     border-radius: 10px;
-}
-.main {
-    margin: 10px;
-    background-color: rgba(202, 166, 166, 0.89);
 }

@@ -11,8 +11,7 @@ import {
     Legend,
     ArcElement,
 } from "chart.js";
-
-import "./index.css";
+import "./index.css"; // Import the CSS file
 
 ChartJS.register(
     CategoryScale,
@@ -37,14 +36,14 @@ const Dashboard = () => {
         datasets: [
             {
                 label: "Orders",
-                data: [1.6, 1.2, 0.8, 0.4],
+                data: [0.4, 1.2, 0.8, 0.6, 1.2, 0.2],
                 borderColor: "#ffb74d",
                 backgroundColor: "#ffb74d",
                 yAxisID: "y",
             },
             {
                 label: "Sales",
-                data: [4, 3, 2, 1],
+                data: [3, 1, 2, 4],
                 borderColor: "#64b5f6",
                 backgroundColor: "#64b5f6",
                 yAxisID: "y",
@@ -106,16 +105,9 @@ const Dashboard = () => {
     };
 
     return (
-        <div style={{ display: "flex", height: "100vh" }}>
+        <div style={{ display: "flex", height: "100vh" }} className="main">
             {/* Sidebar */}
-            <div
-                className="sidebar"
-                style={{
-                    width: "15%",
-                    backgroundColor: "#f3e5f5",
-                    padding: "20px",
-                    borderRadius: "10px",
-                }}>
+            <div className="sidebar">
                 <ul>
                     <li className="active">Dashboard</li>
                     <li>Inventory</li>
@@ -130,42 +122,14 @@ const Dashboard = () => {
                     <li>Account</li>
                 </ul>
             </div>
+            {/* Main Content */}{" "}
+            <div className="dashboard-container">
+                <div className="chart-container line-chart">
+                    <Line data={lineData} options={lineOptions} />
+                </div>
 
-            {/* Main Content */}
-
-            <div style={{ width: "85%", padding: "20px" }} className="main">
-                <nav>
-                    <h2>DashBoard</h2>
-                </nav>
-                <div className="dashboard-container">
-                    <div
-                        style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                        }}>
-                        {/* Line Chart */}
-                        <div
-                            style={{
-                                width: "60%",
-                                backgroundColor: "#fff",
-                                padding: "20px",
-                                borderRadius: "10px",
-                                marginRight: "10px",
-                            }}>
-                            <Line data={lineData} options={lineOptions} />
-                        </div>
-
-                        {/* Pie Chart */}
-                        <div
-                            style={{
-                                width: "35%",
-                                backgroundColor: "#fff",
-                                padding: "20px",
-                                borderRadius: "10px",
-                            }}>
-                            <Pie data={pieData} options={pieOptions} />
-                        </div>
-                    </div>
+                <div className="chart-container pie-chart">
+                    <Pie data={pieData} options={pieOptions} />
                 </div>
             </div>
         </div>
